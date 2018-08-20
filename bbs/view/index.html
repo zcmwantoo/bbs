@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+<div class="container">
+    <h1>留言板
+        <small>记录你的每一天</small>
+    </h1>
+    <a class="btn btn-success" href="/post">写留言</a>
+    <a class="btn btn-info" href="/login">登录</a>
+    <div class="line"></div>
+
+    {{ each items }}
+    <div class="box">
+        <span class="first">{{ $value.name }}</span>
+        <span class="second">{{ $value.time }}</span>
+        <span class="second">{{ $value.email }}</span>
+        <p>{{ $value.content }}
+            </p>
+
+    </div>
+    {{ /each }}
+
+
+
+
+</div>
+</body>
+</html>
